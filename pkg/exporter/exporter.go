@@ -929,7 +929,7 @@ func (e *Exporter) parseStats(ch chan<- prometheus.Metric, stats map[net.Addr]me
 			e.parseAndNewMetric(ch, e.lruCrawlerMovesToCold, prometheus.CounterValue, s, "moves_to_cold", server),
 			e.parseAndNewMetric(ch, e.lruCrawlerMovesToWarm, prometheus.CounterValue, s, "moves_to_warm", server),
 			e.parseAndNewMetric(ch, e.lruCrawlerMovesWithinLru, prometheus.CounterValue, s, "moves_within_lru", server),
-			e.parseAndNewMetric(ch, e.malloced, prometheus.GaugeValue, s, "total_malloced"),
+			e.parseAndNewMetric(ch, e.malloced, prometheus.GaugeValue, s, "total_malloced", server),
 			e.parseAndNewMetric(ch, e.acceptingConnections, prometheus.GaugeValue, s, "accepting_conns", server),
 		)
 		if err != nil {
