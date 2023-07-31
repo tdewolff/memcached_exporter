@@ -769,12 +769,12 @@ func (e *Exporter) Describe(ch chan<- *prometheus.Desc) {
 // delivers them as Prometheus metrics. It implements prometheus.Collector.
 func (e *Exporter) Collect(ch chan<- prometheus.Metric) {
 	var wg sync.WaitGroup
-	for _, server := range e.addresses {
+	for _, address := range e.addresses {
 		wg.Add(1)
-		go func() {
+		go func(server string) {
 			e.CollectServer(ch, server)
 			wg.Done()
-		}()
+		}(address)
 	}
 	wg.Wait()
 }
