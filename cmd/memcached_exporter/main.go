@@ -32,8 +32,8 @@ import (
 	"github.com/prometheus/exporter-toolkit/web"
 	webflag "github.com/prometheus/exporter-toolkit/web/kingpinflag"
 
-	"github.com/prometheus/memcached_exporter/pkg/exporter"
-	"github.com/prometheus/memcached_exporter/scraper"
+	"github.com/tdewolff/memcached_exporter/pkg/exporter"
+	"github.com/tdewolff/memcached_exporter/scraper"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module github.com/prometheus/memcached_exporter
+module github.com/tdewolff/memcached_exporter
 
 go 1.18
 

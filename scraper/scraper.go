@@ -22,7 +22,7 @@ import (
 	"github.com/go-kit/log/level"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/prometheus/memcached_exporter/pkg/exporter"
+	"github.com/tdewolff/memcached_exporter/pkg/exporter"
 )
 
 type Scraper struct {
